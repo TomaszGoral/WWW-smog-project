@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.0.1/build/ol-debug.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://openlayers.org/en/v3.19.1/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+    <script src="https://epsg.io/3857.js"></script>
+
+    <style type="text/css">
+        
+
+        #buttons {
+            height: 10vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <title>Aplikacja 2017</title>
+
+</head>
+<body>
+    <ol id="lista" name="lista">
+    </ol>
+<script>
+
+    $.ajax({
+        url: "/Home/Getlist",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: {},
+        success: function (r) {
+            console.log('success');
+            var myNode = document.getElementById("lista");
+            console.log('success',r);
+            while (myNode.firstChild) {
+                myNode.removeChild(myNode.firstChild);
+            }
+            console.log('success', r.length);
+            for (var i = 0; i < r.length; i++){
+                console.log('i',i);
+                var elem = document.createElement("li");
+                elem.innerText = r[i].Address + " liczba punktow " + r[i].Lat;
+                myNode.appendChild(elem);
+            }
+            
+        },
+        error: function (r) {
+            console.warn('error', r);
+
+            var myNode = document.getElementById("lista");
+            while (myNode.firstChild) {
+                myNode.removeChild(myNode.firstChild);
+            }
+        }
+    });
+</script>
+</body>
+</html>

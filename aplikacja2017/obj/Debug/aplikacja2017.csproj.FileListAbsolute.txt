@@ -1,0 +1,153 @@
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\obj\Debug\aplikacja2017.csprojResolveAssemblyReference.cache
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\obj\Debug\aplikacja2017.csproj.CoreCompileInputs.cache
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\csc.exe
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\vbc.exe
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\aplikacja2017.dll.config
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\aplikacja2017.pdb
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\Npgsql.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Helpers.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Mvc.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Razor.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.Razor.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\Npgsql.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Razor.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Webpages.Razor.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Helpers.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\bin\System.Web.Mvc.xml
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\obj\Debug\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\aplikacja2017-r\aplikacja2017\obj\Debug\aplikacja2017.pdb
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\csc.exe
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\vbc.exe
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\aplikacja2017.dll.config
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\aplikacja2017.pdb
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\Npgsql.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Helpers.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Mvc.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Razor.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.Razor.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\Npgsql.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Razor.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Webpages.Razor.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Helpers.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\bin\System.Web.Mvc.xml
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\obj\Debug\aplikacja2017.csprojResolveAssemblyReference.cache
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\obj\Debug\aplikacja2017.csproj.CoreCompileInputs.cache
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\obj\Debug\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\aplikacja2017\aplikacja2017\obj\Debug\aplikacja2017.pdb
+F:\GIS 1.1\aplikacja2017\bin\roslyn\csc.exe
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\GIS 1.1\aplikacja2017\bin\roslyn\System.Collections.Immutable.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\System.Reflection.Metadata.dll
+F:\GIS 1.1\aplikacja2017\bin\roslyn\vbc.exe
+F:\GIS 1.1\aplikacja2017\bin\roslyn\VBCSCompiler.exe
+F:\GIS 1.1\aplikacja2017\bin\roslyn\VBCSCompiler.exe.config
+F:\GIS 1.1\aplikacja2017\bin\aplikacja2017.dll.config
+F:\GIS 1.1\aplikacja2017\bin\aplikacja2017.dll
+F:\GIS 1.1\aplikacja2017\bin\aplikacja2017.pdb
+F:\GIS 1.1\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\GIS 1.1\aplikacja2017\bin\Microsoft.Web.Infrastructure.dll
+F:\GIS 1.1\aplikacja2017\bin\Npgsql.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Threading.Tasks.Extensions.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Helpers.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Mvc.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Razor.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Deployment.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.dll
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Razor.dll
+F:\GIS 1.1\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\GIS 1.1\aplikacja2017\bin\Npgsql.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Threading.Tasks.Extensions.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Razor.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Deployment.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Razor.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Helpers.xml
+F:\GIS 1.1\aplikacja2017\bin\System.Web.Mvc.xml
+F:\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.csprojResolveAssemblyReference.cache
+F:\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.csproj.CoreCompileInputs.cache
+F:\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.dll
+F:\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.pdb
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\csc.exe
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\vbc.exe
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\aplikacja2017.dll.config
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\aplikacja2017.pdb
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\Npgsql.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Helpers.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Mvc.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Razor.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Razor.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\Npgsql.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Razor.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Webpages.Razor.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Helpers.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\bin\System.Web.Mvc.xml
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.csprojAssemblyReference.cache
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.csproj.CoreCompileInputs.cache
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.csproj.CopyComplete
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.dll
+C:\Users\Tomasz\Desktop\GIS 1.1 Tomasz_Goral\GIS 1.1\aplikacja2017\obj\Debug\aplikacja2017.pdb
