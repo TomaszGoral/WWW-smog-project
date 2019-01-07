@@ -4,20 +4,24 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
-    <script src="https://openlayers.org/en/v4.0.1/build/ol-debug.js"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/proj4.js")"></script>
+    <script src="https://epsg.io/3857.js"></script>
+    <script src="https://epsg.io/2178.js"></script>
+    <script src="https://epsg.io/4326.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
-    <script src="https://epsg.io/3857.js"></script>
-    
+
+
+
     <style type="text/css">
         #map {
-            height: 90vh;
+            height: 80vh;
             width: 100vw;
             position: absolute;
-            top: 10vh;
+            top: 20vh;
             left: 0;
         }
+
         #buttons {
             height: 10vh;
             width: 100vw;
@@ -186,7 +190,7 @@
         });
 
         // kliknięcia - strzał do serwera
-        var selectSingleClick = new ol.interaction.Pointer({
+        /*var selectSingleClick = new ol.interaction.Pointer({
 
             handleDownEvent: function (e) {
                 console.warn(e.coordinate);
@@ -195,7 +199,7 @@
 
                 $.ajax({
                     url: "/Home/AddPoint",
-                    type: "GET",
+                    type: "",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     data: JSON.stringify({ lon: lon, lat: lat }),
@@ -212,7 +216,7 @@
                 });
                 vectorSource.addFeature(feature);
             }
-        });
+        });*/
         map.on("click", function (e) {
             console.warn(e.coordinate);
             lon = e.coordinate[0];
@@ -228,7 +232,7 @@
             }
             $.ajax({
                 url: "/Home/AddPoint",
-                type: "GET",
+                type: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: JSON.stringify({ lon: lon, lat: lat}),
@@ -266,9 +270,16 @@
                                     }
                                     if (r.Address != "") {
                                         
+                                        //console.log('point', [r.Lat, r.Lon]);
+                                        //proj4.defs("EPSG:2178", "+proj=tmerc +lat_0=0 +lon_0=21 +k=0.999923 +x_0=7500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
+                                        //proj4.defs("EPSG:3857", "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs");
+                                        //var Proj2178 = ol.proj.get('EPSG:2178');
+                                        //var Proj3857 = ol.proj.get('EPSG:3857');
+                                        var firstProjection = "+proj=tmerc +lat_0=0 +lon_0=21 +k=0.999923 +x_0=7500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
+                                        var secondProjection = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs";
+                                        //I'm not going to redefine those two in latter examples.
                                         console.log('point', [r.Lat, r.Lon]);
-                                        proj4.defs("EPSG:2178", "+proj=tmerc +lat_0=0 +lon_0=21 +k=0.999923 +x_0=7500000 +y_0=0 +ellps=GRS80 +units=m +no_defs");
-                                        var point = ol.proj.transform([r.Lat, r.Lon], 'EPSG:2178', 'EPSG:3857');
+                                        var point = proj4(firstProjection, secondProjection, [r.Lat, r.Lon]);
                                         console.log('point', point);
                                         feature = new ol.Feature({
                                             

@@ -28,7 +28,7 @@ namespace aplikacja2017.Controllers
             List<string> addresslist = new List<string>();
 
             using (NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;" +
-                            "User Id=postgres;Password=goralt;Database=postgres;"))
+                            "User Id=postgres;Password=goralt;Database=postgis;"))
             {
 
                 string punkt = "ST_Transform(ST_GeomFromText('POINT(" +
@@ -92,7 +92,7 @@ namespace aplikacja2017.Controllers
         {
             _address response = new _address { Address = "", Lat = 0, Lon = 0 ,Points=0 };
             using (NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;" +
-                            "User Id=postgres;Password=goralt;Database=postgres;"))
+                            "User Id=postgres;Password=goralt;Database=postgis;"))
             {
                 
                 if (name.Address != "")
@@ -151,7 +151,7 @@ namespace aplikacja2017.Controllers
         {
             List<_address> points = new List<_address>();
             using (NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;" +
-                            "User Id=postgres;Password=goralt;Database=postgres;"))
+                            "User Id=postgres;Password=goralt;Database=postgis;"))
             {
 
                 conn.Open();
@@ -178,7 +178,7 @@ namespace aplikacja2017.Controllers
         {
             string p = "";
             using (NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;" +
-                            "User Id=postgres;Password=goralt;Database=postgres;"))
+                            "User Id=postgres;Password=goralt;Database=postgis;"))
             {
 
                 conn.Open();
@@ -199,7 +199,7 @@ namespace aplikacja2017.Controllers
         {
             List<_ad> lista = new List<_ad>();
             using (NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;" +
-                            "User Id=postgres;Password=goralt;Database=postgres;"))
+                            "User Id=postgres;Password=goralt;Database=postgis;"))
             {
                 int i = 0;
                 conn.Open();
