@@ -10,31 +10,60 @@
     <script src="https://epsg.io/4326.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-
+    <script scr="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-sign-client_id" content="">
 
 
     <style type="text/css">
         #map {
-            height: 80vh;
+            height: 70vh;
             width: 100vw;
             position: absolute;
-            top: 20vh;
+            top: 30vh;
             left: 0;
         }
 
         #buttons {
-            height: 10vh;
+            height: 15vh;
             width: 100vw;
             position: absolute;
-            top: 0;
+            top: 15vh;
+            left: 0;
+        }
+        #form {
+            height: 15vh;
+            width: 100vw;
+            position: absolute;
+            top: 0vh;
             left: 0;
         }
     </style>
 
-    <title>Aplikacja 2017</title>
+    <title>WWW 2019</title>
 
 </head>
 <body>
+    @model aplikacja2017.Models.User
+    <b>Hello @Model.user</b>
+    <input type="button" onclick="location.href='http://localhost:51231/Home/List';" value="Pokaz Liste" />
+    <input type="button" onclick="location.href='http://localhost:51231/Home/Account';" value="Utworz konto" />
+    <form style="position: absolute; top: 8px; right: 8px;" method="post" action="Index" class="form">
+        <div class="container">
+            <input style="display:none" type="text" placeholder="Enter Username" name="suser" value="">
+            <input style="display:none" type="password" placeholder="Enter Password" name="spassword" value="">
+            <button type="submit">Logout</button>
+        </div>
+    </form>
+    <form method="post" action="Index" class="form">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="suser" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="spassword" required>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
     <div id="buttons" class="buttons"></div>
     <div id="map" class="map"></div>
     <script>
@@ -61,7 +90,7 @@
             stroke: stroke
         });
         var vectorPollutionSource = new ol.source.Vector();
-        
+
         var vectorSource = new ol.source.Vector();
         var vectorLayer = new ol.layer.Vector({
             source: vectorSource,
@@ -71,9 +100,9 @@
             source: vectorPollutionSource,
 
         });
-        
 
-        
+
+
         var stylered1 = new ol.style.Style({
             fill: new ol.style.Fill({
                 color: 'rgba(255, 100, 50, 0.3)'
@@ -104,7 +133,7 @@
                 width = 6
                 ;
             console.log('style', type);
-            
+
             var text = "";
             if (type[0] == '#') {
                 $.ajax({
@@ -182,10 +211,10 @@
             ],
             renderer: 'canvas',
             target: 'map',
-            
+
             view: new ol.View({
                 center: [2338840.0820985506, 6844805.243624669],
-                zoom: 8
+                zoom: 14
             })
         });
 
@@ -219,117 +248,86 @@
         });*/
         map.on("click", function (e) {
             console.warn(e.coordinate);
-            lon = e.coordinate[0];
-            lat = e.coordinate[1];
+            var lon = e.coordinate[0];
+            var lat = e.coordinate[1];
             var w = 1;
             var min = 1000000;
             for (var i = 0; i < array.length; i++){
                 var temp = Math.sqrt(Math.pow(Math.abs(lon - array[i][0][0]), 2) + Math.pow(Math.abs(lat - array[i][0][1]), 2));
-                if (temp<min){
+                if (temp < min){
                     min = temp;
                     w = array[i][1];
                 }
             }
-            $.ajax({
-                url: "/Home/AddPoint",
-                type: "POST",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                data: JSON.stringify({ lon: lon, lat: lat}),
-                success: function (response) {
-                    console.log('res', response);
-                    var myNode = document.getElementById("buttons");
-                    while (myNode.firstChild) {
-                        myNode.removeChild(myNode.firstChild);
-                    }
-                    var h = document.createElement("H3");         
-                    var t = document.createTextNode("Sprecyzuj adres");     
-                    h.appendChild(t);
-                    myNode.appendChild(h);
-                    //myNode.appendChild(document.createElement("br"));
-                    
-                    for (var i = 0; i < response.length; i++) {
-                        var element = document.createElement("input");
-                        element.type = "button";
-                        element.value = response[i];
-                        element.onclick = function () { 
-                            console.log('add', this.value);
-                            var ad = this.value;
-                            $.ajax({
-                                url: "/Home/AddAddress",
-                                type: "POST",
-                                contentType: "application/json; charset=utf-8",
-                                dataType: "json",
-                                data: JSON.stringify({ Address: ad, Lon: lon, Lat: lat, Points:w}),
-                                success: function (r) {
-                                    alert('Added ' + ad);
-                                    
-                                    var myNode = document.getElementById("buttons");
-                                    while (myNode.firstChild) {
-                                        myNode.removeChild(myNode.firstChild);
-                                    }
-                                    if (r.Address != "") {
-                                        
-                                        //console.log('point', [r.Lat, r.Lon]);
-                                        //proj4.defs("EPSG:2178", "+proj=tmerc +lat_0=0 +lon_0=21 +k=0.999923 +x_0=7500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
-                                        //proj4.defs("EPSG:3857", "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs");
-                                        //var Proj2178 = ol.proj.get('EPSG:2178');
-                                        //var Proj3857 = ol.proj.get('EPSG:3857');
-                                        var firstProjection = "+proj=tmerc +lat_0=0 +lon_0=21 +k=0.999923 +x_0=7500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
-                                        var secondProjection = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs";
-                                        //I'm not going to redefine those two in latter examples.
-                                        console.log('point', [r.Lat, r.Lon]);
-                                        var point = proj4(firstProjection, secondProjection, [r.Lat, r.Lon]);
-                                        console.log('point', point);
-                                        feature = new ol.Feature({
-                                            
-                                            geometry: new ol.geom.Point([point[0], point[1]])
-                                        });
-                                        //feature.setId('stylered');
-                                        //feature.setStyle(stylered);
-                                        //feature.setStyle(selectableStyle(stylered));
-                                        feature.set('description', '#' + r.Address);
-                                        console.log('address', feature.get('description'));
-                                        vectorSource.addFeature(feature);
-                                    }
-                                },
-                                error: function (r) {
-                                    console.warn('error', response);
-                                    
-                                    var myNode = document.getElementById("buttons");
-                                    while (myNode.firstChild) {
-                                        myNode.removeChild(myNode.firstChild);
-                                    }
-                                }
-                            });
-                        };
-                        console.log('i', i);
-                        console.log('resi', response[i]);
-                        var foo = document.getElementById("buttons");
-                        //Append the element in page (in span).  
-                        foo.appendChild(element);
-                    }
-                    var element = document.createElement("input");
-                    element.type = "button";
-                    element.value = "Cancel";
-                    element.onclick = function () {
-                        var myNode = document.getElementById("buttons");
-                        while (myNode.firstChild) {
-                            myNode.removeChild(myNode.firstChild);
-                        }
-                    }
-                    var foo = document.getElementById("buttons");
-                    foo.appendChild(element);
-                    
-                    //console.log('success', response);
-                    //alert('Adres: ' + response[0]);
-                },
-                error: function (response) {
-                    console.warn('error', response);
+            var coord = ol.proj.toLonLat(e.coordinate).map(function (val) { return val.toFixed(6); });
+            fetch('http://nominatim.openstreetmap.org/reverse?format=json&lon=' + coord[0] + '&lat=' + coord[1]).then(function (response) {
+                return response.json();
+            }).then(function (json) {
+                var buttons = document.getElementById("buttons");
+                while (buttons.firstChild) {
+                    buttons.removeChild(buttons.firstChild);
                 }
+                var h = document.createElement("H3");
+                var t = document.createTextNode("Akceptuj adres");
+                h.appendChild(t);
+                buttons.appendChild(h);
+
+                var element = document.createElement("input");
+                element.type = "button";
+                element.value = json.address.road + " " + json.address.house_number;
+                element.onclick = function () {
+                    console.log('add', this.value);
+                    var ad = json.address.road + " " + json.address.house_number + " " + json.address.city;
+                    console.log(ad);
+                    $.ajax({
+                        url: "/Home/AddAddress",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: JSON.stringify({ Address: ad, Lon: lon, Lat: lat, Points: w , User: "@Model.user", Password: "@Model.password"}),
+                        success: function (r) {
+                            if (r.Address == "") {
+                                alert("Wyczerpano dzienna liczbe zgloszen");
+                                var buttons = document.getElementById("buttons");
+                                while (buttons.firstChild) {
+                                    buttons.removeChild(buttons.firstChild);
+                                }
+                            }
+                            else if (r.Address != "Update") {
+                                feature = new ol.Feature({
+                                    geometry: new ol.geom.Point([r.Lon, r.Lat])
+                                });
+                                feature.set('description', '#' + r.Address);
+                                console.log('address from feature', feature.get('description'));
+                                vectorSource.addFeature(feature);
+
+                                var buttons = document.getElementById("buttons");
+                                while (buttons.firstChild) {
+                                    buttons.removeChild(buttons.firstChild);
+                                }
+                            }
+                        },
+                        error: function (r) {
+                            var myNode = document.getElementById("buttons");
+                            while (myNode.firstChild) {
+                                myNode.removeChild(myNode.firstChild);
+                            }
+                        }
+
+                    });
+                };
+                buttons.appendChild(element);
+                var cancel = document.createElement("input");
+                cancel.type = "button";
+                cancel.value = "Cancel";
+                cancel.onclick = function () {
+                    var buttons = document.getElementById("buttons");
+                    while (buttons.firstChild) {
+                        buttons.removeChild(buttons.firstChild);
+                    }
+                }
+                buttons.appendChild(cancel);
             });
-            
-            
         });
 
         var drawPolygon = new ol.interaction.Draw({
@@ -337,8 +335,6 @@
             type: 'Point',
             style: stylered
         });
-        //map.addInteraction(drawPolygon);
-        //map.addInteraction(selectSingleClick);
 
         // wczytywanie punktów z bazy danych
         $.ajax({
@@ -350,15 +346,10 @@
             success: function (response) {
                 var l = response.length;
                 console.log('success', response);
-
                 for (var i = 0; i < l; i++) {
                     feature = new ol.Feature({
-                        
                         geometry: new ol.geom.Point([response[i].Lon, response[i].Lat])
                     });
-                    //feature.setId('stylered');
-                    //feature.setStyle(stylered);
-                    //feature.setStyle(selectableStyle(stylered));
                     feature.set('description', '#'+response[i].Address);
                     console.log('address', feature.get('description'));
                     vectorSource.addFeature(feature);
@@ -367,52 +358,31 @@
             error: function (response) { console.warn('getAllPoints error', response); }
         });
 
-        
+
         $.getJSON('https://api.waqi.info/search/?token=1ee93026043de120ab7df180bb2f73b78f6f6541&keyword=mazowieckie', function (data) {
             var l = data.data.length;
             console.log('data', data);
-            
             console.log('l', l);
-
             for (var i = 0; i < l; i++) {
                 console.log('point', [data.data[i].station.geo[0], data.data[i].station.geo[1]]);
                 var point = ol.proj.transform([data.data[i].station.geo[1], data.data[i].station.geo[0]], 'EPSG:4326', 'EPSG:3857');
                 array.push([point, data.data[i].aqi]);
-
                 if (data.data[i].aqi != "" && data.data[i].aqi != "-"){
                     console.log('newpoint', point);
-
                     var feature = new ol.Feature({
-
                         geometry: new ol.geom.Point([point[0], point[1]]),
-
                     });
                     feature.set('description', data.data[i].aqi);
                     console.log('aqi', feature.get('description'));
-                    
                     vectorPollutionSource.addFeature(feature);
                 }
             }
         });
-
-        
-
-        
         var hoverInteraction = new ol.interaction.Select({
             condition: ol.events.condition.pointerMove,
             style: stylebigred,
-            
         });
         map.addInteraction(hoverInteraction);
-        //map.on('pointermove', function (e) {
-        //    if (e.dragging) return;
-
-        //    var pixel = map.getEventPixel(e.originalEvent);
-        //    var hit = map.hasFeatureAtPixel(pixel);
-
-        //    map.getTargetElement().style.cursor = hit ? 'pointer' : '';
-        //});
-
     </script>
 </body>
 </html>

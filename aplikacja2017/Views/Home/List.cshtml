@@ -11,7 +11,9 @@
     <script src="https://epsg.io/3857.js"></script>
 
     <style type="text/css">
-        
+        th, td{
+            border: 1px solid black;
+        }
 
         #buttons {
             height: 10vh;
@@ -22,14 +24,14 @@
         }
     </style>
 
-    <title>Aplikacja 2017</title>
+    <title>List</title>
 
 </head>
 <body>
-    <ol id="lista" name="lista">
-    </ol>
-<script>
 
+    <table id="table" style="border:1px solid black; border-collapse: collapse"></table>
+<script>
+    
     $.ajax({
         url: "/Home/Getlist",
         type: "POST",
@@ -38,24 +40,43 @@
         data: {},
         success: function (r) {
             console.log('success');
-            var myNode = document.getElementById("lista");
+            var myNode = document.getElementById("table");
             console.log('success',r);
             while (myNode.firstChild) {
                 myNode.removeChild(myNode.firstChild);
             }
             console.log('success', r.length);
+            var tr = document.createElement("tr");
+            var th1 = document.createElement("th");
+            var th2 = document.createElement("th");
+            var th3 = document.createElement("th");
+            th1.innerText = "Pollution index";
+            th2.innerText = "Click count";
+            th3.innerText = "Address";
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            tr.appendChild(th3);
+            myNode.appendChild(tr);
             for (var i = 0; i < r.length; i++){
+                var tr = document.createElement("tr");
                 console.log('i',i);
-                var elem = document.createElement("li");
-                elem.innerText = r[i].Address + " liczba punktow " + r[i].Lat;
-                myNode.appendChild(elem);
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+                td1.innerText = r[i].Lat;
+                td2.innerText = r[i].Address;
+                td3.innerText = r[i].Lon;
+                tr.appendChild(td1);
+                tr.appendChild(td3);
+                tr.appendChild(td2);
+                myNode.appendChild(tr);
             }
             
         },
         error: function (r) {
             console.warn('error', r);
 
-            var myNode = document.getElementById("lista");
+            var myNode = document.getElementById("table");
             while (myNode.firstChild) {
                 myNode.removeChild(myNode.firstChild);
             }
